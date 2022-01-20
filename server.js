@@ -26,6 +26,8 @@ app.get("/", function(req, res) {
   
   });
 
+  app.use("public",express.static(__dirname+"/public"))
+
 
 var port = process.env.PORT || 3000;
 bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function(){
